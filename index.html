@@ -1,31 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>OdmaSBA | Odumasi M/A '2' Basic School</title>
-  <link rel="icon" href="https://unlimbot-02.hb.ru-msk.vkcloud-storage.ru/uploads/7b210b76cbc1490aac9db9b9ec48d9471efdcfe52cff7678.jpg">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html, body {
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      background-color: #064e3b;
-    }
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-      display: block;
-    }
-  </style>
+  <title>Embedded Content</title>
 </head>
 <body>
   <iframe 
-    src=https://script.google.com/macros/s/AKfycbxXYSSyc01O8nz8Lb6Y3sqprrj71QivBcLh9epiKTui1Oc7kRUtX4WhZV_Rrl80p14Z/exec" 
-    allow="camera; microphone; geolocation; clipboard-read; clipboard-write; fullscreen"
-    loading="eager">
+    src="https://script.google.com/macros/s/AKfycbxXYSSyc01O8nz8Lb6Y3sqprrj71QivBcLh9epiKTui1Oc7kRUtX4WhZV_Rrl80p14Z/exec"
+    width="100%"
+    height="100%"
+    allowfullscreen="true"
+    style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; border: none;">
   </iframe>
+
+  <script>
+    window.onload = function() {
+      document.querySelector('iframe')
+        .requestFullscreen()
+        .catch((err) => {
+          console.error('Error attempting to enable full-screen mode:', err.message);
+        });
+    };
+  </script>
 </body>
 </html>
